@@ -1,0 +1,2 @@
+pi_ros:pi_vision_control:pi_voice_control:pimouse_ros
+-DCATKIN_DEVEL_PREFIX=/home/ri/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ri/catkin_ws/install -G Unix Makefiles

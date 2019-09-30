@@ -1,0 +1,18 @@
+-w word1.dict
+#-h model/phone_m/jnas-tri-3k16-gid.binhmm
+#-hlist model/phone_m/logicalTri
+-h jnas-tri-3k16-gid.binhmm
+-hlist logicalTri 
+-lv 800
+-headmargin 300
+-tailmargin 300
+-rejectshort 800
+#-fvad 3
+-zmeanframe
+-b 1500
+-b2 100
+-s 500
+-m 10000
+-n 30
+-output 1
+-module

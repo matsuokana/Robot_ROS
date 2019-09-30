@@ -1,0 +1,8 @@
+prefix=/home/ri/catkin_ws/devel
+
+Name: pi_vision_control
+Description: Description of pi_vision_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ri/catkin_ws/devel/lib 
+Requires: 

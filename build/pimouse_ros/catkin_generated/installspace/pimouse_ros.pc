@@ -1,0 +1,8 @@
+prefix=/home/ri/catkin_ws/install
+
+Name: pimouse_ros
+Description: Description of pimouse_ros
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ri/catkin_ws/install/lib 
+Requires: 

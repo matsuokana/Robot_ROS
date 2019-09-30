@@ -1,0 +1,8 @@
+prefix=/home/ri/catkin_ws/install
+
+Name: pi_ros
+Description: Description of pi_ros
+Version: 0.0.0
+Cflags: -I/home/ri/catkin_ws/install/include
+Libs: -L/home/ri/catkin_ws/install/lib 
+Requires: 
