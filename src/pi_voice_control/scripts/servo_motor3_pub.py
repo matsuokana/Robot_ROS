@@ -98,8 +98,8 @@ def stop():
 
 """制御を行うメインの部分です"""
 if __name__ == '__main__':
-    global loop
-    loop = False
+    #global loop
+    #loop = False
 
     #今回はサーボモーターが3つあります
     args = sys.argv

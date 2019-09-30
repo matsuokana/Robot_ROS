@@ -1,4 +1,4 @@
--w word1.dict
+-w word2.dict
 #-h model/phone_m/jnas-tri-3k16-gid.binhmm
 #-hlist model/phone_m/logicalTri
 -h jnas-tri-3k16-gid.binhmm

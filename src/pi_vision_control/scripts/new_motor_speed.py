@@ -114,9 +114,9 @@ def turn_left_forward(speed):
 def turn_right_forward(speed):
     global L6470_SPI_CHANNEL
     L6470_SPI_CHANNEL = 0
-    L6470_run(-1*speed)
+    L6470_run(speed)
     L6470_SPI_CHANNEL = 1
-    L6470_run(speed / 2)
+    L6470_run(-1 * speed / 2)
 
 def multiple_orders(direction, speed):
     global L6470_SPI_CHANNEL

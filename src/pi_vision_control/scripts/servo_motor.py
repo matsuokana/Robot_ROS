@@ -3,8 +3,6 @@ import  Adafruit_PCA9685
 import time
 import sys
 
-loop = False
-
 #サーボモーターをコントロールするためのクラス
 class servo_Class:
     #ChannelはPCA9685のサーボモーターを繋いだチャンネル
@@ -48,7 +46,7 @@ def SetUpNeck():
 
 def FlyAway():
     global loop
-    loop = True
+    loop = True 
     rightWing , leftWing = SetUpWing()
     rightFly , leftFly = SetUpFly()
     rightWing.SetPos(0)
@@ -57,18 +55,13 @@ def FlyAway():
     rightWing.SetPos(180)
     leftWing.SetPos(0)
     time.sleep(1)
-    try:
-       while loop:
-            rightFly.SetPos(0)
-            leftFly.SetPos(180)
-	    time.sleep(0.7)
-	    rightFly.SetPos(180)
-            leftFly.SetPos(0)
-            time.sleep(0.7)
-    except KeyboardInterrupt :         #Ctl+Cが押されたらループを終了
-	    print("\nCtl+C")
-    except Exception as e:
-             print(str(e))
+    while loop:
+    	rightFly.SetPos(0)
+        leftFly.SetPos(180)
+	time.sleep(0.7)
+	rightFly.SetPos(180)
+        leftFly.SetPos(0)
+        time.sleep(0.7)
 
 def Tail():
     global loop
@@ -96,19 +89,19 @@ def stop():
     global loop
     loop = False
 
-"""制御を行うメインの部分です"""
-if __name__ == '__main__':
-    #global loop
-    #loop = False
+def servo_main():
+#"""制御を行うメインの部分です"""
+    if __name__ == '__main__':
+        #今回はサーボモーターが3つあります
+        global loop 
+        loop = False
+        args = sys.argv
 
-    #今回はサーボモーターが3つあります
-    args = sys.argv
-
-    if args[1]=='F':
-        FlyAway()
-    elif args[1]=='T':
-        Tail()
-    elif args[1]=='N':
-	Neck()
-    else:
-       stop()
+        if args[1]=='F':
+            FlyAway()
+        elif args[1]=='T':
+            Tail()
+        elif args[1]=='N':
+	          Neck()
+        else:
+            stop()
